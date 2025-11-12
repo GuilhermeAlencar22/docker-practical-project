@@ -10,8 +10,10 @@ def home():
 def orders():
     return jsonify([
         {"id": 101, "user_id": 1, "produto": "Notebook", "valor": 4500.00},
-        {"id": 102, "user_id": 2, "produto": "Teclado Mecânico", "valor": 520.00},
-        {"id": 103, "user_id": 3, "produto": "Monitor 27\"", "valor": 1250.00}
+        {"id": 102, "user_id": 2, "produto": "Ipad", "valor": 1000.00},
+        {"id": 103, "user_id": 3, "produto": "PC gamer", "valor": 5000.00},
+        {"id": 104, "user_id": 4, "produto": "mouse", "valor": 120.00},
+        {"id": 105, "user_id": 5, "produto": "Monitor "", "valor": 1250.00}
     ])
 
 if __name__ == "__main__":
