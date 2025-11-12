@@ -1,0 +1,21 @@
+services:
+  service1:
+    build: ./service1-users
+    container_name: service1-users
+    ports:
+      - "5001:5001"
+
+  service2:
+    build: ./service2-orders
+    container_name: service2-orders
+    ports:
+      - "5002:5002"
+
+  gateway:
+    build: ./gateway
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - service1
+      - service2

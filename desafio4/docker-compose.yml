@@ -1,0 +1,21 @@
+services:
+  service-a:
+    build: ./service-a
+    container_name: service-a
+    ports:
+      - "5001:5001"
+    networks:
+      - micro_net
+
+  service-b:
+    build: ./service-b
+    container_name: service-b
+    depends_on:
+      - service-a
+    ports:
+      - "5002:5002"
+    networks:
+      - micro_net
+
+networks:
+  micro_net:
