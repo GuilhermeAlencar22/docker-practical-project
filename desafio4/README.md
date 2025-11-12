@@ -1,10 +1,3 @@
-Perfeito, Guilherme 👏
-Abaixo está o **`README.md` completo do Desafio 4 — Microsserviços Independentes**, já formatado para GitHub, com **descrição, arquitetura, endpoints, execução e testes**.
-Basta copiar e colar no seu repositório ou diretório do projeto.
-
----
-
-```markdown
 # 🧩 Desafio 4 — Microsserviços Independentes (Docker + Flask)
 
 ## 🎯 Objetivo
@@ -92,8 +85,6 @@ services:
 
 ### 1️⃣ Subir os containers
 
-No terminal dentro da pasta `desafio4/`, execute:
-
 ```bash
 docker compose up -d --build
 ```
@@ -105,15 +96,6 @@ docker compose up -d --build
 ```bash
 docker ps
 ```
-
-Resultado esperado:
-
-```
-CONTAINER ID   IMAGE           NAMES
-xxxxxx         desafio4-service-a   service-a
-yyyyyy         desafio4-service-b   service-b
-```
-
 ---
 
 ### 3️⃣ Testar os Endpoints
@@ -124,16 +106,6 @@ yyyyyy         desafio4-service-b   service-b
 curl http://localhost:5001/users
 ```
 
-**Resposta esperada:**
-
-```json
-[
-  {"id": 1, "nome": "Guilherme Alencar", "ativo_desde": "2022-05-14"},
-  {"id": 2, "nome": "Mariana Costa", "ativo_desde": "2023-02-01"},
-  {"id": 3, "nome": "Lucas Mendes", "ativo_desde": "2024-07-22"}
-]
-```
-
 ---
 
 #### 🔸 Service B (Consumidor)
@@ -142,47 +114,12 @@ curl http://localhost:5001/users
 curl http://localhost:5002/info
 ```
 
-**Resposta esperada:**
-
-```json
-[
-  "Usuário Guilherme Alencar ativo desde 2022-05-14",
-  "Usuário Mariana Costa ativo desde 2023-02-01",
-  "Usuário Lucas Mendes ativo desde 2024-07-22"
-]
-```
-
 ---
 
-## 🔍 Explicação Técnica
+## 🔍 Explicação 
 
 * Cada microsserviço possui seu próprio **Dockerfile** e **dependências isoladas**.
 * A comunicação entre eles é feita via **HTTP requests** na **rede interna** do Docker Compose.
 * O **Service B** utiliza `requests` para acessar o endpoint `/users` do Service A.
 * Essa abordagem reflete a **arquitetura de microsserviços desacoplados**.
 
----
-
-## 📦 Comandos Úteis
-
-🧱 **Rebuild completo**
-
-```bash
-docker compose up -d --build
-```
-
-🧹 **Parar e remover containers**
-
-```bash
-docker compose down
-```
-
-🧼 **Limpar volumes e imagens**
-
-```bash
-docker system prune -a
-```
-
----
-
-``
