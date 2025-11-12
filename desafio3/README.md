@@ -1,9 +1,3 @@
-Perfeito, Guilherme 🔥
-Aqui está o **README.md completo e pronto para o GitHub** do **Desafio 3 – Orquestração com Docker Compose**, formatado em **Markdown** com explicações, arquitetura, comandos e boas práticas.
-
----
-
-````markdown
 # 🚀 Desafio 3 — Docker Compose Orquestrando Serviços
 
 ## 🧠 1. Descrição da solução, arquitetura e decisões técnicas
@@ -45,33 +39,7 @@ Demonstrar a **orquestração de múltiplos serviços dependentes** (Web + Banco
 
 ---
 
-## 🏗️ 3. Arquitetura de Rede
-
-Todos os serviços compartilham a mesma rede interna **`backend`**, criada automaticamente pelo Docker Compose.
-
-```plaintext
-                ┌───────────────┐
-                │   Web (Flask) │◄───▶ Redis (cache)
-                │  Porta 5000   │
-                │  conecta em   │
-                │  db:5432      │
-                └───────▲───────┘
-                        │
-                        │
-                 PostgreSQL (db)
-                   Porta 5432
-````
-
----
-
-## 🧰 4. Instruções de execução passo a passo
-
-> 💡 Pré-requisitos:
->
-> * Docker Desktop instalado e em execução
-> * Estar dentro da pasta `desafio3/` no terminal
-
----
+## 🧰 3. Instruções de execução passo a passo
 
 ### 1️⃣ Subir os serviços com Docker Compose
 
@@ -79,28 +47,10 @@ Todos os serviços compartilham a mesma rede interna **`backend`**, criada autom
 docker compose up -d --build
 ```
 
-> ⚠️ Caso apareça o erro `address already in use`, altere a porta `5000` no `docker-compose.yml` para `8081:5000`
-> ou remova containers antigos com:
->
-> ```bash
-> docker rm -f web web_app
-> ```
-
----
-
 ### 2️⃣ Verificar containers ativos
 
 ```bash
 docker ps
-```
-
-Você deve ver algo assim:
-
-```
-CONTAINER ID   IMAGE             PORTS                    NAMES
-xxxxx          desafio3-web      0.0.0.0:5000->5000/tcp   web_app
-xxxxx          postgres:15       5432/tcp                 postgres_db
-xxxxx          redis:7           6379/tcp                 redis_cache
 ```
 
 ---
@@ -125,42 +75,15 @@ docker compose logs -f
 
 ---
 
-### 5️⃣ Testar a comunicação manualmente (opcional)
-
-#### Entrar no container web
-
-```bash
-docker exec -it web_app bash
-```
-
-#### Testar conexões internas
-
-```bash
-# Verificar se Redis responde
-ping -c 2 redis_cache
-
-# Verificar conexão com banco
-apt update && apt install -y postgresql-client
-psql -h postgres_db -U admin -d empresa -c "SELECT NOW();"
-```
-
----
-
-### 6️⃣ Encerrar e limpar o ambiente
+### 5️⃣ Encerrar e limpar o ambiente
 
 ```bash
 docker compose down
 ```
 
-Se quiser remover também o volume (dados do banco):
-
-```bash
-docker compose down -v
-```
-
 ---
 
-## 📦 5. docker-compose.yml (estrutura usada)
+## 📦 5. docker-compose.yml 
 
 ```yaml
 services:
@@ -206,6 +129,3 @@ networks:
 ```
 
 ---
-
-
-
