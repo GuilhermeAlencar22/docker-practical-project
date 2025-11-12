@@ -1,4 +1,3 @@
--- Script executado na primeira inicialização do container
 CREATE TABLE funcionarios (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100),
@@ -8,4 +7,6 @@ CREATE TABLE funcionarios (
 INSERT INTO funcionarios (nome, cargo) VALUES
 ('Guilherme Alencar', 'Analista de Dados'),
 ('Mariana Costa', 'Dev Back-End'),
-('Lucas Mendes', 'DevOps Engineer');
+('Ricardo', 'RH'),
+('Rodrigo', 'Design'),
+('Lucas Mendes', 'Devops');
