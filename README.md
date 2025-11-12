@@ -1,20 +1,11 @@
-Perfeito, Guilherme 👏
-Aqui está um **README profissional, atraente e técnico**, ideal para colocar na **raiz do repositório GitHub** (`README.md`) e impressionar tanto **professores** quanto **recrutadores**.
-Ele apresenta seus 5 desafios de forma clara, moderna e com uma pegada de portfólio profissional — mostrando domínio em **Docker, Docker Compose, microsserviços e orquestração**.
-
----
-
 # 🐳 Docker Practical Project — Desafios Completos (1 a 5)
 
 > 🚀 Projeto prático e completo com foco em **Docker, Microsserviços e Orquestração com Compose**
-> 💡 Desenvolvido por **Guilherme Alencar**
-
 ---
 
 ## 📘 Sobre o Projeto
 
 Este repositório reúne **5 desafios práticos** que simulam cenários reais de **DevOps, backend distribuído e arquitetura de microsserviços**.
-Cada desafio foi construído **do zero**, com código **100% funcional**, documentação e **containerização completa com Docker**.
 
 O objetivo é demonstrar **competência técnica**, **organização de serviços** e **boas práticas de integração e deploy local**.
 
@@ -93,27 +84,7 @@ O objetivo é demonstrar **competência técnica**, **organização de serviços
 
 ---
 
-## 🧠 Conhecimentos Aplicados
-
-✅ Criação e otimização de **Dockerfiles**
-✅ Uso de **Docker Compose** para orquestração de múltiplos containers
-✅ Configuração de **redes internas** e **variáveis de ambiente**
-✅ Desenvolvimento de **microsserviços RESTful com Flask**
-✅ Comunicação entre containers via **HTTP**
-✅ Persistência de dados com **PostgreSQL + Volumes**
-✅ Integração com **Redis (cache)**
-✅ Automação de builds e execuções com scripts shell
-
----
-
 ## 🚀 Como Executar o Projeto
-
-Clone o repositório:
-
-```bash
-git clone https://github.com/GuilhermeAlencar22/docker-practical-project.git
-cd docker-practical-project
-```
 
 Entre em qualquer desafio e suba os serviços:
 
@@ -152,15 +123,6 @@ docker-practical-project/
 
 ---
 
-## 💬 Contato
-
-👤 **Guilherme Alencar**
-📧 [guilherme@empresa.com](mailto:guilherme@empresa.com)
-💼 [LinkedIn](https://www.linkedin.com/in/guilhermealencar22/)
-🐙 [GitHub](https://github.com/GuilhermeAlencar22)
-
----
-
 ## ⭐ Reconhecimentos
 
 Este projeto foi desenvolvido como parte de um **laboratório prático de Docker e Microsserviços**, focado em consolidar os conceitos de:
@@ -169,8 +131,3 @@ Este projeto foi desenvolvido como parte de um **laboratório prático de Docker
 * **isolamento de serviços**,
 * **orquestração** e
 * **comunicação entre microsserviços**.
-
----
-
-Quer que eu gere esse README em formato **markdown pronto pra colar no seu GitHub (com emojis, formatação e badges no topo)**?
-Posso adicionar, por exemplo, badges de linguagem (`Python`, `Docker`, `Flask`) e um banner visual estilizado.
