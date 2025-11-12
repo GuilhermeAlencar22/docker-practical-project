@@ -6,8 +6,10 @@ app = Flask(__name__)
 def get_users():
     users = [
         {"id": 1, "nome": "Guilherme Alencar", "ativo_desde": "2021-09-15"},
-        {"id": 2, "nome": "Mariana Costa", "ativo_desde": "2022-02-10"},
-        {"id": 3, "nome": "Lucas Mendes", "ativo_desde": "2020-12-01"}
+        {"id": 2, "nome": "Rodrigo", "ativo_desde": "2021-09-15"},
+        {"id": 3, "nome": "Ricardo", "ativo_desde": "2021-09-15"},
+        {"id": 4, "nome": "Mariana Costa", "ativo_desde": "2022-02-10"},
+        {"id": 5, "nome": "Lucas Mendes", "ativo_desde": "2020-12-01"}
     ]
     return jsonify(users)
 
