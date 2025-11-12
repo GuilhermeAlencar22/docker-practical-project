@@ -4,15 +4,12 @@ import redis
 import os
 
 app = Flask(__name__)
-
-# Variáveis de ambiente
 DB_HOST = os.getenv("DATABASE_HOST")
 DB_USER = os.getenv("DATABASE_USER")
 DB_PASSWORD = os.getenv("DATABASE_PASSWORD")
 DB_NAME = os.getenv("DATABASE_NAME")
 CACHE_HOST = os.getenv("CACHE_HOST")
 
-# Conexão com Redis (cache)
 cache = redis.Redis(host=CACHE_HOST, port=6379)
 
 def get_employees():
