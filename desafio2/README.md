@@ -102,7 +102,6 @@ docker exec -it postgres-db psql -U admin -d empresa
 Dentro do PostgreSQL:
 
 ```sql
-\dt
 SELECT * FROM funcionarios;
 ```
 ---
