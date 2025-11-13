@@ -1,6 +1,6 @@
-# 🚀 Desafio 5 — Microsserviços com API Gateway (Docker + Flask)
+# Desafio 5 — Microsserviços com API Gateway (Docker + Flask)
 
-## 🎯 Objetivo
+## Objetivo
 Criar uma arquitetura com **API Gateway** centralizando o acesso a dois microsserviços:
 - **Service 1 (Users)** → fornece dados de usuários (`/users`)
 - **Service 2 (Orders)** → fornece pedidos (`/orders`)
@@ -10,7 +10,7 @@ Todos os serviços devem rodar em containers via **Docker Compose**.
 
 ---
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```
 
@@ -37,7 +37,7 @@ desafio5/
 
 ---
 
-## 🧠 Arquitetura e decisões técnicas
+## Arquitetura e decisões técnicas
 
 - **API Gateway** (Flask) atua como ponto único de entrada: `/users` e `/orders`.
 - **Service1 (Users)** expõe `/users` com lista de usuários (JSON).
@@ -48,7 +48,7 @@ desafio5/
 
 ---
 
-## 🐳 docker-compose.yml (resumo)
+## docker-compose.yml (resumo)
 (O arquivo já está no repositório; este é o comportamento esperado)
 
 ```yaml
@@ -76,7 +76,7 @@ services:
 ````
 ---
 
-## 🧾 Arquivos principais (o que eles fazem)
+## Arquivos principais (o que eles fazem)
 
 * `service1-users/app.py` → fornece `/users` (JSON).
 * `service2-orders/app.py` → fornece `/orders` (JSON).
@@ -85,7 +85,7 @@ services:
 
 ---
 
-## ▶️ Passo a passo — Como executar (MacBook / VS Code / Terminal)
+## Passo a passo — Como executar 
 
 1. Subir e construir tudo:
 
