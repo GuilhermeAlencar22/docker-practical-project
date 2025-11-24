@@ -1,4 +1,4 @@
-# 🐳 Docker Practical Project — Desafios Completos (1 a 5)
+# Docker Practical Project — Desafios Completos (1 a 5)
 
 > 🚀 Projeto prático e completo com foco em **Docker, Microsserviços e Orquestração com Compose**
 ---
